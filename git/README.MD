@@ -10,3 +10,4 @@ git command study
      ```
      $ git config --list // git 설정 확인
      $ git config --global core.editor vim // git editor를 vim으로 변경 
+     ```
