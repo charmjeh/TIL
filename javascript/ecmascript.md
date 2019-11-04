@@ -1,6 +1,6 @@
 ## Object.entries ( 객체=>배열 )& Object.fromEntries (배열 => 객체)
 
-```
+```javascript
 const obj = {a: 4, b: 9, c: 16};
 
 
@@ -18,7 +18,7 @@ console.log(obj2); // {a: 2, b: 3, c: 4}
 
 ## flat() & flatMap() : 배열 내부의 하위 배열을 쉽게 합칠 수 있다. (flatMap = (flat + map))
 
-```
+```javascript
 const arr = [4.25, 19.99, 25.5];
 
 console.log(arr.map(value=> [Math.round(value)]))
@@ -30,7 +30,7 @@ console.log(arr.flatMap(value)=> [Math.round(value)])
 
 ## Optional catch
 
-```
+```javascript
 // before
 
 try {
@@ -40,7 +40,7 @@ try {
 }
 ```
 
-```
+```javascript
 // after
 
 try {
