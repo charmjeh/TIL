@@ -1,0 +1,8 @@
+# TIL
+Today What I Learned
+
+## TOC
+
+1. SHORTCUT
+2. JAVASCRIPT
+3. GIT COMMAND
