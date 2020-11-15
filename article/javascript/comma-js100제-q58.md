@@ -10,7 +10,7 @@ const comma = (s) => {
   }
 };
 
-console.log(comma("123456789")); // 123,456
+console.log(comma("123456789")); // 123,456,789
 ```
 
 
