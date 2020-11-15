@@ -1,5 +1,5 @@
 
-<<img width="382" alt="콤마찍기" src="https://user-images.githubusercontent.com/43127789/99161538-b3037e80-2736-11eb-9573-878c49e46f5a.PNG">
+<img width="382" alt="콤마찍기" src="https://user-images.githubusercontent.com/43127789/99161538-b3037e80-2736-11eb-9573-878c49e46f5a.PNG">
 
 ```javascript
 const comma = (s) => {
