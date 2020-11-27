@@ -25,6 +25,11 @@ How To Write a Git Commit Message
 자주 쓰는 Git 명령어
 ===
 
+### 🟧 깃 설정 조회
+```bash
+$ git config --list
+```
+
 ### 🟧 사용자 정보 설정
 ```bash
 $ git config --global user.name "John Doe"
@@ -115,6 +120,24 @@ $ git remote set-branches --add origin [브랜치명]
 $ git fetch origin [브랜치명]:[브랜치명]
 ```
 
+### 🟧 수정 내용 저장 (수정내용 : 아직 커밋하지 않은 변경사항)
+```bash
+$ git stash save '작업내용' // 수정 내용 임시 저장
+$ git stash list // 수정 내용 조회
+$ git stash // 이름 지정하지 않고 현재 수정 내용을 스태시 목록에 저장
+$ git stash pop // 마지막으로 저장된 스태시를 현재 브랜치에 적용
+$ git stash apply // 마지막으로 저장된 스태시를 현재 브랜치에 적용
+$ git stash drop // 스태시를 목록에서 삭제
+```
+
+### 🟧 수정한 사항이 있는데 잠시 다른 브랜치로 이동해야할 때
+```bash
+$ git stash save '작업내용'
+$ git checkout [다른 브랜치]
+$ git checkout [원래 브랜치] // 작업 끝나고 되돌아온다
+$ git checkout [pop/stash] // pop : 적용과 동시에 스태시 목록에서 지움, stash : 현재 브랜치에 적용만 함
+```
+
 ### 🟧 커밋하지 않은 로컬 변경사항을 저장하고 스테이지를 비우는 기능
 ```bash
 git stash (save {stash-name}) // 스태시 저장
@@ -129,6 +152,23 @@ git stash drop // 스태시 목록에서 마지막 저장 항목 삭제
 $ git reflog // 삭제된 commit id 확인
 $ git reset --hard <커밋해시id>
 ```
+
+### 🟧 깃 로그 조회
+```bash
+$ git log // 로그 조회
+$ git log --pretty=oneline // 각 커밋당 한 줄로 로그 조회
+```
+
+### 🟧 변경사항 조회
+```bash
+$ git diff // working directory와 staging area 간의 차이점을 비교
+$ git diff --cached // 워킹 디렉토리와 저장소에 저장된 커밋 간의 차이점을 비교
+$ git diff --color-words // 변경된 단어 기준으로 색깔을 다르게 하여 보여줌
+$ git diff [비교대상 커밋 1] [비교대상 커밋 2]
+$ git diff [비교대상 브랜치1] [비교대상 브랜치 2]
+$ git diff [비교브랜치] [origin/비교브랜치] // 해당 브랜치와 원격 저장소의 브랜치 간의 차이를 비교
+```
+
 
 ...[기타 명령어를 위한 공식 문서 링크](https://git-scm.com/doc)
 # RELATED LINK
