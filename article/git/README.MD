@@ -1,26 +1,47 @@
-How To Write a Git Commit Message
+🎭 Commit Message Convention
 ===
-**FIX** - 올바르지 않은 동작을 고친 경우  
-**ADD** - 코드나 테스트, 예제, 문서등의 추가가 있을 때  
-**REMOVE** - 코드의 삭제가 있을 때  
-**USE** - 무언가를 사용해 구현하는 경우  
-**REFACTOR** - 전면 수정이 있을 때  
-**SIMPLIFY** - 복잡한 코드를 단순화할때  
-**UPDATE** - 개정이나 버전 업데이트가 있을 때  
-**IMPROVE** - 향상이 있을 때  
-**MAKE** - 기존 동작의 변경  
-**IMPLEMENT** - 코드가 추가된 정도보다 더 주목할 만한 구현체를 완성시켰을때, 특히 모듈이나 클래스 등의 단위  
-**REVISE** - 문서의 개정이 잇는 경우  
-**CORRECT** - 문법 오류 혹은 타입의 변경, 이름 변경 
-**ENSURE** - 무엇이 확실하게 보장받는다는 것을 명시   
-**PREVENT** - 특정한 처리를 못하게 막음  
-**AVOID** - 회피, IF구문으로 특정한 동작을 제외시키는 경우에도 사용  
-**MOVE** - 코드의 이동이 있는 경우  
-**RENAME** - 이름 변경이 있는 경우  
-**ALLOW** - 허용을 표현할 때 사용  
-**VERIFY** - 검증 코드를 넣을 때 사용  
-**SET** - 변수 값을 변경하는 등의 작은 수정에 주로 사용  
-**PASS** - 파라메터를 넘기는 처리에 주로 사용
+
+### COMMIT Message Structure
+```
+type : subject
+
+body (optional)
+
+footer (optional)
+```
+
+### [Commit Type](https://doublesprogramming.tistory.com/256)
+**`feat`** - 새로운 기능 추가  
+**`fix`** - 버그 수정  
+**`docs`** - 문서 수정  
+**`style`** - 코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우  
+**`refactor`** - 코드 리팩토링  
+**`test`** - 테스트 코드, 리팩토링 코드 추가  
+**`chore`** - 빌드 업무 수정, 패키지 매니저 수정  
+
+🎭 How To Write a Git Commit Message
+===
+**`FIX`** - 올바르지 않은 동작을 고친 경우  
+**`ADD`** - 코드나 테스트, 예제, 문서등의 추가가 있을 때  
+**`REMOVE`** - 코드의 삭제가 있을 때  
+**`USE`** - 무언가를 사용해 구현하는 경우  
+**`REFACTOR`** - 전면 수정이 있을 때  
+**`SIMPLIFY`** - 복잡한 코드를 단순화할때  
+**`UPDATE`** - 개정이나 버전 업데이트가 있을 때  
+**`IMPROVE`** - 향상이 있을 때  
+**`MAKE`** - 기존 동작의 변경  
+**`IMPLEMENT`** - 코드가 추가된 정도보다 더 주목할 만한 구현체를 완성시켰을때, 특히 모듈이나 클래스 등의 단위  
+**`REVISE`** - 문서의 개정이 잇는 경우  
+**`CORRECT`** - 문법 오류 혹은 타입의 변경, 이름 변경 
+**`ENSURE`** - 무엇이 확실하게 보장받는다는 것을 명시   
+**`PREVENT`** - 특정한 처리를 못하게 막음  
+**`AVOID`** - 회피, IF구문으로 특정한 동작을 제외시키는 경우에도 사용  
+**`MOVE`** - 코드의 이동이 있는 경우  
+**`RENAME`** - 이름 변경이 있는 경우  
+**`ALLOW`** - 허용을 표현할 때 사용  
+**`VERIFY`** - 검증 코드를 넣을 때 사용  
+**`SET`** - 변수 값을 변경하는 등의 작은 수정에 주로 사용  
+**`PASS`** - 파라메터를 넘기는 처리에 주로 사용
 
 자주 쓰는 Git 명령어
 ===
@@ -171,11 +192,14 @@ $ git diff [비교브랜치] [origin/비교브랜치] // 해당 브랜치와 원
 
 
 ...[기타 명령어를 위한 공식 문서 링크](https://git-scm.com/doc)
-# RELATED LINK
+
+🎭 RELATED LINK
+==
   git을 사용하면서 발생할 수 있는 이슈들과 기본 개념들을 잘 섞어서 정리된 글
    + [ref link](https://parksb.github.io/article/28.html)
    
-# err fix
+🎭 err fix
+==
    ## Waiting for your editor to close the file... error: There was a problem with the editor
    editor를 변경해서 해결하였음.
    ```
