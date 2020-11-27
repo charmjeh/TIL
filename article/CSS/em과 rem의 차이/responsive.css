@@ -1,0 +1,41 @@
+/**
+    크롬 브라우저의 기본 글꼴 크기가 16이고,
+    글꼴은 설정 > 글꼴 크기 / 글꼴 맞춤 설정에서 크기를 조정할 수 있다. 
+    폰트 사이즈 => rem 추천 (어떤 컴포넌트에서나 동일하게 작용할 수 있도록)
+*/
+
+h1 {
+    /* 기존 28px에서 28/16 = 1.75이므로 1.75rem으로 변경 */
+    font-size: 1.75rem;
+    color: burlywood;
+    margin: auto;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    /* 기존 36px에서 16*2 = 36이므로 2em으로 변경 */
+    padding: 2em;
+}
+
+.component {
+    border: 1px solid burlywood;
+    margin: 1em;
+}
+
+.title {
+    font-size: 1.5rem;
+    padding: 1em;
+    background-color: burlywood;
+}
+
+.contents {
+    font-size: 1.125rem;
+    padding: 1em;
+}
+
+@media screen and (max-width: 48rem) {
+    .container {
+        flex-direction: column;
+    }
+}
