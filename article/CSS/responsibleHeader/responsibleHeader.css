@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro';
+}
+
+:root {
+    --text-color: #f0f4f5;
+    --background-color: #3b3b3b;
+    --accent-color: #d49466;
+}
+
+a,
+a:active,
+a:visited {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 8px 12px;
+}
+
+.navbar__logo {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+
+.navbar__logo i {
+    color: var(--accent-color);
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar__menu li {
+    padding: 8px 12px;
+}
+
+.navbar__menu li:hover {
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+.navbar__icons {
+    display: flex;
+    list-style: none;
+    color: var(--text-color);
+    padding-left: 0;
+}
+
+.navbar__icons li {
+    padding: 8px 12px;
+}
+
+.navbar__toggleBtn,
+.navbar__toggleBtn:hover {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+
+    /* flex-direction: 아이템을 세로로 정렬; */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* 너비가 넓어졌을때 자동으로 left로 변경되어, center 다시 넣음 */
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar__menu li:hover {
+        border-radius: 0;
+    }
+
+    .navbar__icons {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar__toggleBtn {
+        display: block;
+    }
+
+    .navbar__menu.active,
+    .navbar__icons.active {
+        display: flex;
+    }
+}
