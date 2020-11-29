@@ -9,7 +9,7 @@
 {
   const fruits = '🍎, 🥝, 🍌, 🍒';
   const result = fruits.split(',');
-  console.log('Q2 ', result); // 'apple, banana, orange'
+  console.log('Q2 ', result); // ["🍎", " 🥝", " 🍌", " 🍒"]
 }
 
 // Q3. make this array look like this: [5, 4, 3, 2, 1]
