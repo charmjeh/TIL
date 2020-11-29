@@ -1,7 +1,6 @@
-# TIL
-Today What I Learned
+# Today What I Learned (TIL)
 
-## TOC
+## Table Of Contents
 
 1. JAVASCRIPT
     1) [문제 풀이를 통한 배열 함수 복습](./article/javascript/array_function.js)
