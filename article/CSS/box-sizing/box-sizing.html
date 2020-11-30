@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOX SIZING</title>
     <style>
-        div {
-            margin: 10px;
-            width: 150px;
+        * {
             box-sizing: border-box;
             /* box-sizing: content-box; => (기본값)컨텐트의 크기만큼 width와 height가 지정된다.  */
             /* box-sizing: border-box; => border를 포함하여 width와 height가 지정된다.  */
+        }
+        div {
+            margin: 10px;
+            width: 150px;
         }
         #small {
             border: 10px solid black;
@@ -25,3 +27,4 @@
     <div id="large">Hello</div>
 </body>
 </html>
+<!-- 출처: https://opentutorials.org/course/2418/13405 -->

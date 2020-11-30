@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fab fa-youtube"></i>
+            <span class="title">Youtube</span>
+        </div>
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+    </header>
+
+    <!-- Video Player -->
+    <section class="player">
+        <video src="./assets/video.mp4" controls></video>
+    </section>
+
+    <div class="infoAndUpNext">
+    <!-- Info -->
+    <section class="info">
+        <div class="metadata">
+            <ul class="hashtags">
+                <li>#People</li>
+                <li>#Peaceful</li>
+                <li>#Beach</li>
+            </ul>
+            <div class="titleAndButton">
+                <span class="title clamp">Clone Coding Youtube Mobile Website 유튜브 모바일 웹사이트 따라 만들기 | 프론트엔드 개발자 입문편. HTML, CSS, Javascript 드림코딩과 함께하는 프론트엔드 실전 입문편</span>
+                <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+            </div>
+            <span class="views">1M views | 1 month ago</span>
+        </div>
+        <div class="actions">
+            <button><i class="fas fa-thumbs-up"></i><span>1K</span></button>
+            <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
+            <button><i class="fas fa-share"></i><span>Share</span></button>
+            <button><i class="fas fa-plus"></i><span>Save</span></button>
+            <button><i class="fab fa-font-awesome-flag"></i><span>Report</span></button>
+        </div>
+        <div class="channel">
+            <div class="metadata">
+                <img src="./assets/profile_picture.jpg" alt="profile image">
+                <div class="info">
+                    <span class="name">EunHee 은희</span>
+                    <span class="subscribers">1M subscribers</span>
+                </div>
+            </div>
+            <button class="subscribe">subscribe</button>
+        </div>
+    </section>
+    <!-- Up Next -->
+    <section class="upNext">
+        <span class="title">Up Next</span>
+        <ul>
+            <li class="item">
+                <div class="img">
+                    <img src="./assets/item1.jpg" alt="upNext video">
+                </div>
+                <div class="info">
+                    <span class="title">고양이 전용 회원제 에스테틱 ASMR(열화와 같은 성원에 힘입어 2탄 출시)</span>
+                    <span class="name">곰돌이 숭늉이</span>
+                    <span class="views">304K views | 1 week ago</span>
+                </div>
+                <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+            </li>
+            <li class="item">
+                <div class="img">
+                    <img src="./assets/item2.jpg" alt="upNext video">
+                </div>
+                <div class="info">
+                    <span class="title">[샌프란시스코 브이로그 | SF Vlog #34] 랜선 집들이, 샌프란시스코 아파트 공개</span>
+                    <span class="name">SOL샌프란시스코 본사 언니</span>
+                    <span class="views">996 subscribers | 7,271 views</span>
+                </div>
+                <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+            </li>
+            <li class="item">
+                <div class="img">
+                    <img src="./assets/item3.jpg" alt="upNext video">
+                </div>
+                <div class="info">
+                    <span class="title">아니 강아지랑 이렇게 뛰어노는 고양이가 있다고?...리얼 개냥이 까미의 시골살이</span>
+                    <span class="name">EBS 세나개 X 고부해</span>
+                    <span class="views">1.6M views | 2 months ago</span>
+                </div>
+                <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+            </li>
+        </ul>
+    </section>
+    </div>
+</body>
+</html>
