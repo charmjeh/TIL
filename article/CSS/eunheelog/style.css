@@ -1,0 +1,141 @@
+:root {
+    /* Colors */
+    --black-color: #333;
+    --white-color: white;
+    --beige-color: #EFE7E3;
+    --pink-color: pink;
+    --brown-light-color: #C2B4AB;
+    /* string 형식으로 작성하지 않음! */
+    --highlight-color1: yellowgreen;
+    --highlight-color2: skyblue;
+    --highlight-color3: orange;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--beige-color);
+}
+
+li {
+    /* li는 block도, inline도 아닌 list-item 속성이기 때문에 점과 줄이 보여진다. 이를 없애기 위해 inline으로 변경 */
+    display: inline;
+    margin-left: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+a:hover {
+    color: var(--white-color);
+    transition: 0.3s;
+}
+
+/* Container */
+.frame {
+    /* margin: 30px 150px; */
+    margin: 30px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigator */
+.navigator {
+    display: flex;
+    /* row => flex 기본값 */
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navigator__site-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: var(--brown-light-color);
+}
+
+.navigator__link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Dashboard */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+.kr-comment {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    padding-bottom: 55px;
+    line-height: 160%;
+}
+
+.kr-comment__sample {
+    background-color: var(--pink-color);
+    -webkit-text-stroke: 1px var(--black-color);
+}
+
+.kr-comment__sample:hover {
+    background-color: transparent;
+    color: var(--white-color);
+    transition: none;
+    -webkit-text-stroke: 1px var(--black-color);
+}
+
+.kr-comment__highlight {
+    background-color: transparent;
+    color: var(--white-color);
+    -webkit-text-stroke: 1px var(--black-color);
+    transition: none;
+}
+
+.kr-comment__highlight:hover {
+    background-color: var(--pink-color1);
+    color: var(--black-color1);
+    transition: none;
+}
+
+.kr-comment__highlight--type1:hover {
+    background-color: var(--highlight-color1);
+}
+
+.kr-comment__highlight--type2:hover {
+    background-color: var(--highlight-color2);
+}
+
+.kr-comment__highlight--type3:hover {
+    background-color: var(--highlight-color3);
+}
+
+.en-comment {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: italic;
+    letter-spacing: -0.3;
+    padding-bottom: 40px;
+}
+
+/* Recent Works */
+/* 클래스 명은 명사형으로 사용하는것을 권장 */
+.recent-menu {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--brown-light-color);
+
+    /* block속성인 h5를 inline으로 변경하여 오른쪽으로 정렬 */
+    display: inline;
+    align-self: flex-end;
+    padding-top: 100px;
+}
