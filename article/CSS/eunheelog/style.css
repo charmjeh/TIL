@@ -24,7 +24,7 @@ body {
 li {
     /* li는 block도, inline도 아닌 list-item 속성이기 때문에 점과 줄이 보여진다. 이를 없애기 위해 inline으로 변경 */
     display: inline;
-    margin-left: 15px;
+    margin-left: 1em;
 }
 
 a {
@@ -39,8 +39,7 @@ a:hover {
 
 /* Container */
 .frame {
-    /* margin: 30px 150px; */
-    margin: 30px 50px;
+    margin: 1.8em 15em;
     display: flex;
     flex-direction: column;
 }
@@ -55,28 +54,28 @@ a:hover {
 
 .navigator__site-name {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--brown-light-color);
 }
 
 .navigator__link {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /* Dashboard */
 .dashboard {
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 9.37rem;
 }
 
 .kr-comment {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
-    font-size: 60px;
-    padding-bottom: 55px;
+    font-size: 3.2rem;
+    padding-bottom: 3.43rem;
     line-height: 160%;
 }
 
@@ -120,22 +119,41 @@ a:hover {
 .en-comment {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1rem;
     font-style: italic;
     letter-spacing: -0.3;
-    padding-bottom: 40px;
+    padding-bottom: 2.5em;
 }
 
 /* Recent Works */
 /* 클래스 명은 명사형으로 사용하는것을 권장 */
 .recent-menu {
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--brown-light-color);
 
     /* block속성인 h5를 inline으로 변경하여 오른쪽으로 정렬 */
     display: inline;
     align-self: flex-end;
-    padding-top: 100px;
+    padding-top: 6.25em;
+}
+
+@media screen and (max-width: 48rem) {
+    .frame {
+        margin: 1.8em 3em;
+    }
+
+    .dashboard {
+        margin-top: 5em;
+    }
+
+    .kr-comment {
+        font-size: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .en-comment {
+        font-size: 0.8rem;
+    }
 }
