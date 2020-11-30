@@ -13,8 +13,8 @@
 3. CSS
     1) [반응형 Header](.\article\CSS\responsibleHeader\responsibleHeader.css)
     2) [em vs rem](.\article\CSS\EMvsREM\EMvsREM.md)
-    3) [box-sizing](article\CSS\box-sizing\box-sizing.html)
-    4) [반응형 유튜브 클론코딩(HTML+CSS+JAVASCRIPT)](article\CSS\youtube-mobile\youtube-mobile.md)
+    3) [box-sizing](.\article\CSS\box-sizing\box-sizing.html)
+    4) [반응형 유튜브 클론코딩(HTML+CSS+JAVASCRIPT)](.\article\CSS\youtube-mobile\youtube-mobile.md)
 4. 알고리즘
     1) [블럭탑쌓기_JS100제](.\article\알고리즘\블럭탑쌓기_JS100제.md)
     2) [콤마찍기_JS100제](.\article\알고리즘\콤마찍기_JS100제.md)
