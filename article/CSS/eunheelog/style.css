@@ -39,7 +39,9 @@ a:hover {
 
 /* Container */
 .frame {
-    margin: 1.8em 15em;
+    margin: 1.8em 10em;
+    height: 100vh;
+    background-color: var(--beige-color);
     display: flex;
     flex-direction: column;
 }
@@ -74,10 +76,15 @@ a:hover {
 .kr-comment {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
-    font-size: 3.2rem;
+    font-size: 5rem;
     padding-bottom: 3.43rem;
-    line-height: 160%;
+    line-height: 150%;
 }
+
+.kr-comment__code-icon {
+    width: 10rem;
+}
+
 
 .kr-comment__sample {
     background-color: var(--pink-color);
@@ -119,10 +126,10 @@ a:hover {
 .en-comment {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-style: italic;
     letter-spacing: -0.3;
-    padding-bottom: 2.5em;
+    padding-bottom: 2.3em;
 }
 
 /* Recent Works */
@@ -136,7 +143,33 @@ a:hover {
     /* block속성인 h5를 inline으로 변경하여 오른쪽으로 정렬 */
     display: inline;
     align-self: flex-end;
-    padding-top: 6.25em;
+    padding-top: 7em;
+}
+
+/* footer */
+.footer {
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.footer .title {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 1em;
+    font-size: 1rem;
+}
+
+.footer .contact__email {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 3rem;
+    margin: 0.1em 0 0.5em;
+}
+
+.footer .contact__text {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-bottom: 0.3em;
 }
 
 @media screen and (max-width: 48rem) {
