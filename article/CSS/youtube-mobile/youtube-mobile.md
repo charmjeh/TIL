@@ -28,7 +28,7 @@ p {
 }
 ```
 
-### position: sticky
+### position: sticky [관련하여 자세한 설명은 여기에](https://tech.lezhin.com/2019/03/20/css-sticky)
 스크롤 시 지정한 자리에 고정되어있도록 할 수 있음
 ```css
 div.container {
@@ -36,8 +36,17 @@ div.container {
     position: sticky;
     top: 0;
 }
-```
 
+/* 만약 position: sticky 속성을 지원하는 브라우저에만 이 스타일을 적용하려면 @supports 규칙을 이용할 수 있습니다. @supports 규칙은 IE 11 브라우저가 지원하지 않습니다. */
+@supports (position: sticky) or (position: -webkit-sticky) {
+    .sticky {
+        position: -webkit-sticky; /* 사파리 브라우저 지원 */
+        position: sticky;
+        top: 4px;
+        background: red;
+    }
+}
+```
 ### box-sizing: border-box;
 border-box는 테두리와 안쪽 여백의 크기(margin, padding)도 요소의 크기로 고려합니다.
 ```css
