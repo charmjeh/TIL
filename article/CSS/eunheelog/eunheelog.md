@@ -27,6 +27,30 @@ ex) 탭메뉴 : `block`, 탭 메뉴의 각 탭 : `element`
 ```
 **modifier** : 블럭이나 엘리먼트의 속성
 
+
+**BEM 가장 흔한 실수: .a__b__c--d, .a__b--c--d**  ([참조](https://tech.lezhin.com/2018/08/20/challenge-css))
+```
+/* 블록, 요소, 변형은 각각 한 번씩만 사용해야 한다. */
+.a__b__c--d (X) /* 두 번째 키워드 'b'는 블록인가? 요소인가? 'a, b, c'는 DOM 구조를 의미하나? */
+.a__b--c--d (X) /* 네 번째 키워드 'd'는 새 선택자로 분리해야 한다. '.a__b--c' 그리고 '.a__b--d' */
+
+/* DOM 구조에 의존하는 명명 규칙 세트. 이렇게 하지 마세요. */
+.comics (O)
+.comics__list (O)
+.comics__list__item (X)
+.comics__list__item__link (X)
+.comics__list__item__link__title (X)
+.comics__list__item__link__thumb (X)
+
+/* DOM 구조에 의존하지 않는 명명 규칙 세트. 이렇게 하세요. */
+.comics (O)
+.comics__list (O)
+.comics__item (O)
+.comics__link (O)
+.comics__title (O)
+.comics__thumb (O)
+```
+
 ### 플렉스 요소(flex item)의 align-self 속성 ([데모 보기](http://www.tcpschool.com/examples/tryit/tryhtml.php?filename=css3_expand_flexbox_15))
 align-self 속성은 플렉스 컨테이너의 align-items 속성보다 우선 적용됩니다.
 이 속성을 이용하면 플렉스 요소마다 서로 다른 align 속성값을 설정할 수 있습니다
