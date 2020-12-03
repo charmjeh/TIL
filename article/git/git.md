@@ -190,6 +190,12 @@ $ git diff [비교대상 브랜치1] [비교대상 브랜치 2]
 $ git diff [비교브랜치] [origin/비교브랜치] // 해당 브랜치와 원격 저장소의 브랜치 간의 차이를 비교
 ```
 
+### 🟧 git add, commit, push 한 번에 하는 방법([출처](https://janeljs.github.io/git/git-cmp/))
+
+```bash
+git config --global alias.cmp '!f() { git add -A && git commit -m "$@" && git push; }; f'
+git cmp "커밋 메시지"
+```
 
 ...[기타 명령어를 위한 공식 문서 링크](https://git-scm.com/doc)
 
