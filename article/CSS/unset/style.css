@@ -1,0 +1,4 @@
+/* unset css without Default Setting and CSS Unset File */
+body>* {
+    all: unset;
+}

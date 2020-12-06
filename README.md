@@ -16,6 +16,15 @@
     3) [box-sizing](.\article\CSS\box-sizing\box-sizing.html)
     4) [반응형 유튜브 클론코딩(HTML+CSS+JAVASCRIPT)](.\article\CSS\youtube-mobile\youtube-mobile.md)
     5) [타이핑 애니메이션(HTML+CSS+JAVASCRIPT)](./article/CSS/typing-effect/typing-effect.md)
+    6) UNSET
+        ```css
+        /* 
+            a {text-decoration: none;} 처럼 하나하나 설정하거나 unset file을 이용할 필요 없음!
+        */
+        body>* {
+            all: unset;
+        }
+        ```
 4. 알고리즘
     1) [블럭탑쌓기_JS100제](.\article\알고리즘\블럭탑쌓기_JS100제.md)
     2) [콤마찍기_JS100제](.\article\알고리즘\콤마찍기_JS100제.md)
