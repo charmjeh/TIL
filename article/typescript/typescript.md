@@ -34,7 +34,7 @@ $ yarn add tsc-watch --dev
 ```
 **와일드 카드 패턴** [참조](https://joshua1988.github.io/ts/config/tsconfig.html#%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC-%EC%86%8D%EC%84%B1)  
   `*`: 해당 디렉토리의 모든 파일 검색  
-  `**`: 하위 디렉토리를 재귀적으로 접근(하위 디렉토리의 하위 디렉토리가 존재하는 경우 반복해서 접근)
+  `**`: 하위 디렉토리를 재귀적으로 접근(하위 디렉토리의 하위 디렉토리가 존재하는 경우 반복해서 접근)  
   `?`: 해당 디렉토리 안에 있는 파일의 이름 중 한글자라도 맞으면 해당
   **위 와일드 카드 패턴에 해당하는 파일 확장자는 js, jsx, ts, tsx, .d.ts 입니다**
 
@@ -92,10 +92,10 @@ class Block {
 ```
 
 ### CLASS
-`constructor` : 클래스로부터 객체를 만들때마다 호출되는 메서드
-`static method`
+`constructor` : 클래스로부터 객체를 만들때마다 호출되는 메서드  
+`static method` :  
   - `Block` 클래스 안에서 항상 사용 가능한 `method`. `method`가 `block class`안에 있고, 클래스가 생성되지 않았어도 호출할 수 있는 `method`이다.
-  - 만약 `static`이 붙지 않는 인스턴스 `method`라면, `new 생성자`를 통해 인스턴스를 만들지 않는다면 해당 `method`를 사용할 수 없다.
+  - 만약 `static`이 붙지 않는 인스턴스 `method`라면, `new 생성자`를 통해 인스턴스를 만들지 않는다면 해당 `method`를 사용할 수 없다.  
 `static method: string` : 해당 함수의 반환값은 string이라는 뜻
 
 ```typescript
