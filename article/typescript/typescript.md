@@ -135,3 +135,7 @@ class Block {
     }
 }
 ```
+
+### 관련 사이트
+1. 이 글의 출처 : [Typescript로 블록체인 만들기 - NOMAD CODERS](https://www.youtube.com/watch?v=7wAhwv2Rbxw)  
+2. SOLID의 의존성 역전 원칙에 의거하여 interface를 implement하여 요구사항 반영하는 예제가 있음 [링크](https://medium.com/humanscape-tech/solid-%EB%B2%95%EC%B9%99-%E4%B8%AD-lid-fb9b89e383ef)
