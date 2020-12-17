@@ -26,6 +26,8 @@
             all: unset;
         }
         ```
+    7) [오디오 녹음 기능](./article/CSS/audioRecorder/audioRecorder.md)
+        * 비디오+오디오 녹음 기능은 유튜브 클론 브랜치에서 확인 가능
 5. 알고리즘
     1) [블럭탑쌓기_JS100제](./article/알고리즘/블럭탑쌓기_JS100제.md)
     2) [콤마찍기_JS100제](./article/알고리즘/콤마찍기_JS100제.md)

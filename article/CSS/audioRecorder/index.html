@@ -4,17 +4,16 @@
 <head>
     <title>Voice Recorder</title>
     <meta charset="UTF-8" />
-    <script src="main.js" defer></script>
-    <style>
-        body {
-            font-family: sans-serif;
-        }
-    </style>
+    <script src="https://kit.fontawesome.com/af16f6cf42.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <input id="recordBtn" type="button" value="Start Recording" />
-    <p id="RecodingTimeText"></p>
+    <button id="recordBtn">
+        <i for="recordBtn" class="fas fa-microphone-alt"></i><br />
+        <span for="recordBtn" id="recordText">Start Recording</span>
+    </button>
+    <p id="RecordingTime"></p>
+    <script src="src/index.js"></script>
 </body>
 
 </html>
