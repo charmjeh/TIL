@@ -107,6 +107,182 @@ export class MoviesController {
     return `This will return one movie with the id: ${movieId}`;
   }
 
+  @Post()
+  create(@Body() movieData) {
+    return movieData;
+  }
+
+  @Patch(':id')
+  patch(@Param('id') movieId: string, @Body() updateData) {
+    return {
+      updatedMovie: movieId,
+      ...updateData,
+    };
+  }
   // ...@Post, @Delete, @Put, @Patch와 같이 쓸 수 있다.
 }
 ```
+
+**Service 생성**  
+```bash
+nest g s # (nest generate service)
+```
+* `Single Responsibility Principle, SRP` : 단일 책임 원칙
+하나의 module, class 혹은 function이 하나의 기능은 꼭 책임져야 한다.  
+* `201 Status Code`: post 리퀘스트에 문제없음  
+
+**`movie.entity.ts`**
+서비스로 보내고 받을 클래스(인터페이스)를 export함, 데이터베이스의 모델
+
+Movie Service 구현
+```typescript
+// movies.service.ts
+@Injectable()
+export class MoviesService {
+  private movies: Movie[] = [];
+
+  getAll(): Movie[] {
+    return this.movies; // database query가 오게됨
+  }
+
+  getOne(id: string): Movie {
+    return this.movies.find(movie => movie.id === +id);
+  }
+
+  // ...
+}
+```
+
+Controller에 생성된 Service를 추가하여 사용
+```typescript
+// Movies.controller.ts
+@Controller('movies')
+export class MoviesController {
+  constructor(private readonly moviesService: MoviesService) {}
+
+  getAll(): Movie[] {
+    return this.moviesService.getAll();
+  }
+
+  getOne(@Param('id') movieId: string): Movie {
+    return this.moviesService.getOne(movieId);
+  }
+
+  @Delete(':id')
+  remove(@Param('id') movieId: string) {
+    return this.moviesService.deleteOne(movieId);
+  }
+  // ...
+}
+```
+
+**`에러 처리`**
+`NotFoundException`: HttpException에서 확장된 NextJS의 제공 기능
+
+```typescript
+getOne(id: string): Movie {
+return this.movies.find(movie => movie.id === +id);
+const movie = this.movies.find(movie => movie.id === +id);
+if (!movie) {
+    throw new NotFoundException(`Movie with ID ${id} not found.`);
+}
+return movie;
+}
+```
+
+**`DTO, Data Transfer Object``**: 데이터 전송 객체
+
+DTO로 CreateMovieDTO객체를 만들어서, movie를 만들기 위해 필요한 정보를 나열할 수 있다.
+```typescript
+// dto/create-movie.dto.ts
+export class CreateMovieDTO {
+  readonly title: string;
+  readonly year: number;
+  readonly genres: string[];
+}
+```
+
+생성된 DTO를 서비스에도 추가  
+```typescript
+// movies.service.ts
+@Injectable()
+export class MoviesService {
+    private movies: Movie[] = [];
+
+    create(movieData: CreateMovieDto) {
+    this.movies.push({
+        id: this.movies.length + 1,
+        ...movieData,
+    });
+    }
+}
+```
+
+**`pipe`, `class-validator`** : 데이터 유효성 검사를 위해 사용. express의 미들웨어같은것  
+`ValidationPipe`  
+    - `whitelist` : true로 설정하면 아무 decorator도 없는 property의 object를 거름  
+    - `forbidNonWhitelisted` : 요청 자체가 잘못된 경우 리퀘스트 자체를 막음  
+    - `transform` : 인자의 타입을 변환할 수 있음 (string => number)
+```bash
+npm i class-validator
+```
+```typescript
+// main.ts
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,
+      forbidNonWhitelisted: true,
+      transform: true,
+    }),
+  );
+  await app.listen(3000);
+}
+bootstrap();
+
+// dto/create-movie.dto.ts
+import { IsString, IsNumber } from 'class-validator';
+
+export class CreateMovieDTO {
+  @IsString()
+  readonly title: string;
+
+  @IsNumber()
+  readonly year: number;
+
+  @IsString({ each: true })
+  readonly genres: string[];
+}
+```
+
+**`PartialType()`**  
+`mapped-types`: 타입을 변환시키고 사용할 수 있게하는 패키지  
+
+```bash
+npm i @nestjs/mapped-types
+```
+
+CreateMovieDTO를 `베이스 타입`으로 하고, PartialType을 사용하여 부분적으로 타입이 변경된 UpdateMovieDTO를 만듬
+```typescript
+// dto/update-movie.dto.ts
+import { PartialType } from '@nestjs/mapped-types';
+import { CreateMovieDTO } from './create-movie.dto';
+
+export class UpdateMovieDTO extends PartialType(CreateMovieDTO) {}
+
+// movies.controller.ts
+@Controller('movies')
+export class MoviesController {
+    constructor(private readonly moviesService: MoviesService) {}
+
+    @Patch(':id')
+    patch(@Param('id') movieId: number, @Body() updateData: UpdateMovieDTO) {
+        return this.moviesService.update(movieId, updateData);
+    }
+}
+```
+
+### 출처
+해당 내용은 노마드 코더 강의 <NextJS로 API만들기>를 듣고 작성한 노트입니다.
+[링크](https://github.com/nomadcoders/hi-nest)
