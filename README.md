@@ -9,7 +9,7 @@
         - Object.entries & Object.fromEntries
         - flat() & flatMap()
         - Optional catch
-2. [TYPESCRIPT](./article/typescript/typescript.md)
+2. [TYPESCRIPT](./article/typescript)
 3. [GIT COMMAND](./article/git/git.md)
 4. CSS
     1) [반응형 Header](./article/CSS/responsibleHeader/responsibleHeader.css)
@@ -36,3 +36,4 @@
 8. [유용한 사이트 모음](./article/유용한_사이트_모음.md)
 9. [WEBPACK](./article/webpack/webpack.md)
 10. [텍스트 파일을 불러와서 내용 출력하기(multer, fs)](./article/use_library/multer_and_fs/multer_and_fs.md)
+11. SENTRY
