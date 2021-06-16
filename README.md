@@ -37,3 +37,35 @@
 9. [WEBPACK](./article/webpack/webpack.md)
 10. [텍스트 파일을 불러와서 내용 출력하기(multer, fs)](./article/use_library/multer_and_fs/multer_and_fs.md)
 11. SENTRY
+
+---
+## 유용한 VSCODE 단축키 모음
+
+**마크다운 미리보기** : `ctrl` + `shift` + `V`  
+**다중 라인 편집** : `ctrl` + `alt` + `아래 화살표`  
+**동일 변수명 모두 편집** : 변수 클릭 후 `F2`  
+**이모지 추가하기** : 윈도우 키 + `:`
+
+---
+## USEFUL SITE
+
+1. 정규식 검사 사이트
+
+    [regex101](regex101.com)  
+    유용한 정규식 표현 모음 제공
+    [regexr](https://regexr.com/)
+    정규식 설명 및 입력한 정규식과 텍스트에 대하여 패턴 검색 수행
+
+2. HTML
+    [HTML ELEMENT 기술 문서](https://developer.mozilla.org/ko/docs/Web/HTML/Element)
+    전체 HTML ELEMENT 및 호환성 정보
+    [Markup Validation Service](http://validator.w3.org/)
+    입력된 html이 올바른 구조로 되어있는지, 정의되지 않은 태그는 없는지 검사
+    
+3. CSS
+    [CANIUSE](https://caniuse.com/css-sticky)
+    브라우저별로 해당 CSS가 지원되는지 확인
+    
+4. [ip-api.com](https://ip-api.com/docs/api:json)
+    ip를 기준으로 위치 정보를 반환
+
