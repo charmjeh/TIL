@@ -199,6 +199,50 @@ git cmp "커밋 메시지"
 
 ...[기타 명령어를 위한 공식 문서 링크](https://git-scm.com/doc)
 
+### 🟧 깃 작업 후 푸시했을때 다른 사람의 이름이 뜰때
+
+글로벌 설정이 다른 사람 이름으로 된 것으로, 로컬/글로벌 깃 설정을 내 정보로 변경해주어야한다.  
+
+ System 설정 파일(위치 : `C:/ProgramData/Git/config`)을 수정 : `git config --system`으로 시작하는 명령어  
+ Global 설정 파일(위치 : `~/.gitconfig`)을 수정 : `git config --global`으로 시작하는 명령어  
+ Local 설정 파일(위치 : `.git/config`)을 수정 : `git config --local`으로 시작하는 명령어  
+
+### 🟧 이름 설정이 잘못된 깃 커밋 여러개 한꺼번에 수정하기
+
+```bash
+$ git rebase -i <직전 커밋 해쉬>
+```
+
+엔터를 누르면 아래와 같이 수정 창이 뜬다. 작성자 변경을 원하는 커밋의 pick을 edit로 변경하고 `:wq`를 사용하여 저장 후 닫기 해주면 된다.
+
+before
+```vim
+pick bd565dc fix: something
+pick e6a772d chore: something
+```
+after
+```vim
+edit bd565dc fix: something
+edit e6a772d chore: something
+```
+
+그리고 변경을 원하는 커밋의 개수만큼 아래의 명령어를 입력하여 변경해주면 된다.  
+변경이 완료되면 git rebase --continue를 입력 시 성공적으로 완료되었다는 메시지가 뜬다.
+```bash
+$ git commit --amend --author="바꾸고싶은 사용자명 <해당 이메일 주소>"
+$ git rebase --continue
+```
+
+`git log`로 확인하고, 모든 변경사항을 push 하면된다. 이때는 원격 저장소의 로그와 다른 경우 `-f` 옵션을 사용하여 강제로 변경한다.(사용 시 주의)
+
+```bash
+$ git push origin <branch-name> -f
+```
+
+
+$ git 
+```
+
 🎭 RELATED LINK
 ==
   git을 사용하면서 발생할 수 있는 이슈들과 기본 개념들을 잘 섞어서 정리된 글
