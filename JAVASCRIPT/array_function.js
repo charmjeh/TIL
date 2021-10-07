@@ -119,5 +119,14 @@ const students = [
   console.log('Bonus ', result); // "45,66,80,88,90"
 }
 
+// Q11. 배열의 차집합
+{
+  const arr1 = [ '🍎', '🥝', '🍌', '🍒'];
+  const arr2 = [ '🍎', '🥝' ]
+  
+  const difference = arr1.filter((fruit) => !arr2.includes(fruit))
+  console.log(difference) // ["🍌", "🍒"]
+}
+
 /* 배열 함수가 선언된 라이브러리를 확인하여 인자와 반환값, 설명을 확인하는 습관이 중요! */
 /* 출처 : DreamCoding by Ellie */
