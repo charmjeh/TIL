@@ -135,6 +135,12 @@ $ git checkout origin [브랜치명]
 $ git branch -m [기존 브랜치명] [신규 브랜치명]
 ```
 
+### 🟧 브랜치 원격 저장소까지 삭제
+```bash
+$ git branch -D [브랜치명]
+$ git push origin --delete [브랜치명]
+```
+
 ### 🟧 원격 신규 브랜치 가져오기
 ```bash
 $ git remote set-branches --add origin [브랜치명]
